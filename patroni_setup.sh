@@ -57,15 +57,15 @@ tmux send 'consul agent -dev' Enter
 
 # start primary node0
 tmux selectp -t 4
-tmux send 'patroni ~/projects/postgres_hunting/configs/node0.yml' Enter
+tmux send 'patroni ~/projects/postgres-utils/configs/node0.yml' Enter
 
 # start primary node1
 tmux selectp -t 5
-tmux send 'patroni ~/projects/postgres_hunting/configs/node1.yml' Enter
+tmux send 'patroni ~/projects/postgres-utils/configs/node1.yml' Enter
 
 # start primary node2
 tmux selectp -t 6 
-tmux send 'patroni ~/projects/postgres_hunting/configs/node2.yml' Enter
+tmux send 'patroni ~/projects/postgres-utils/configs/node2.yml' Enter
 
 # connect to postgres0
 tmux selectp -t 0
