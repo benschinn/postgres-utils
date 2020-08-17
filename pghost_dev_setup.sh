@@ -14,7 +14,7 @@ Panes Map:
 |  pane 0 |  pane 1  |
 |  editor |  shell   |
 |--------------------|
-|  pane 3 |  pane 4  |
+|  pane 2 |  pane 3  |
 | dest db |  src db  |
 |_________|__________|
 
@@ -38,10 +38,10 @@ tmux selectp -t 0
 tmux send $pghost_dir Enter
 
 # pane 4 connect to local source db
-tmux selectp -t 4
+tmux selectp -t 3 
 
 # pane 3 connec to destination db (docker)
-tmux selectp -t 3
+tmux selectp -t 2
 tmux send 'docker start yolos-backup' Enter
 tmux send 'docker exec -it yolos-backup bash' Enter
 tmux send 'su postgres' Enter
