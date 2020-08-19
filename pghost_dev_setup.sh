@@ -37,10 +37,11 @@ tmux send $pghost_dir Enter
 tmux selectp -t 0
 tmux send $pghost_dir Enter
 
-# pane 4 connect to local source db
+# pane 3 connect to local source db
 tmux selectp -t 3 
+tmux send 'psql' Enter
 
-# pane 3 connec to destination db (docker)
+# pane 2 connec to destination db (docker)
 tmux selectp -t 2
 tmux send 'docker start yolos-backup' Enter
 tmux send 'docker exec -it yolos-backup bash' Enter
